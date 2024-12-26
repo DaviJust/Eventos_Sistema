@@ -9,30 +9,26 @@ import javax.swing.JTextField;
 import javax.swing.JLabel;
 import java.awt.Font;
 import java.awt.Color;
+
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JComboBox;
+import javax.swing.JScrollPane;
+import java.awt.Component;
 
 public class telaCadastro extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JTextField nome;
-	/**
-	 * Nome do participante
-	 */
+
 	private JTextField matricula;
-	/**
-	 * matrícula do participante
-	 */
+
 	private JTextField curso;
-	/**
-	 * curso do participante
-	 */
+
 	private JComboBox comboBoxEventos;
-	/**
-	 * Declaração dos componentes Swing
-	 */
+
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -51,7 +47,7 @@ public class telaCadastro extends JFrame {
 	 */
 	public telaCadastro() {
 		getContentPane().setForeground(new Color(191, 191, 191));
-		setBounds(100, 100, 466, 547);
+		setBounds(100, 100, 748, 547);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		getContentPane().setLayout(null);
 		
@@ -116,9 +112,13 @@ public class telaCadastro extends JFrame {
 		cadastrar.setBounds(274, 429, 146, 40);
 		getContentPane().add(cadastrar);
 		
-		JComboBox comboBox = new JComboBox();
-		comboBox.setBounds(10, 353, 410, 35);
-		getContentPane().add(comboBox);
+		JComboBox comboBoxEventosOpcoes = new JComboBox();
+		comboBoxEventosOpcoes.setFont(new Font("Arial", Font.PLAIN, 16));
+		comboBoxEventosOpcoes.setBounds(10, 353, 410, 35);
+		comboBoxEventosOpcoes.setModel(new DefaultComboBoxModel(new String[] {"Pensamento Computacional", "Empregabilidade e IA", "Habilidades ou networking?"}));
+		getContentPane().add(comboBoxEventosOpcoes);
+			
 
 	}
+	
 }

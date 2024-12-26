@@ -24,6 +24,7 @@ public class telaInicial extends JFrame {
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
+		
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -70,6 +71,7 @@ public class telaInicial extends JFrame {
 		getContentPane().add(senha);
 		
 		JButton limpar = new JButton("Limpar");
+
 		limpar.setFont(new Font("Arial", Font.BOLD, 20));
 		limpar.setBounds(20, 212, 156, 41);
 		getContentPane().add(limpar);
