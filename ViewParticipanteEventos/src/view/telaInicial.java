@@ -1,3 +1,6 @@
+/**
+ * Tela de login do usuário
+ */
 package view;
 
 import java.awt.EventQueue;
@@ -6,6 +9,9 @@ import javax.swing.JFrame;
 import javax.swing.JTextArea;
 import javax.swing.JLabel;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.JTextField;
 import javax.swing.JButton;
 
@@ -13,16 +19,7 @@ public class telaInicial extends JFrame {
  
 	private static final long serialVersionUID = 1L;
 	private JTextField login;
-	/**
-	 * login de quem vai realizar o cadastro do estudante
-	 */
 	private JTextField senha;
-	/**
-	 *senha de quem vai realizar o cadastro do estudante
-	 */
-	/**
-	 * Launch the application.
-	 */
 	public static void main(String[] args) {
 		
 		EventQueue.invokeLater(new Runnable() {
@@ -37,9 +34,7 @@ public class telaInicial extends JFrame {
 		});
 	}
 
-	/**
-	 * Create the frame.
-	 */
+
 	public telaInicial() {
 		setBounds(100, 100, 450, 300);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -75,11 +70,25 @@ public class telaInicial extends JFrame {
 		limpar.setFont(new Font("Arial", Font.BOLD, 20));
 		limpar.setBounds(20, 212, 156, 41);
 		getContentPane().add(limpar);
-		
-		JButton Entrar = new JButton("Entrar");
-		Entrar.setFont(new Font("Arial", Font.BOLD, 20));
-		Entrar.setBounds(232, 212, 156, 41);
-		getContentPane().add(Entrar);
+		/**
+		 * limpa os campos de login e senha
+		 */
+		limpar.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+            	login.setText("");
+            	senha.setText("");
+            	}
+            });
+		JButton entrar = new JButton("Entrar");
+		entrar.setFont(new Font("Arial", Font.BOLD, 20));
+		entrar.setBounds(232, 212, 156, 41);
+		getContentPane().add(entrar);
+		entrar.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+            	login.setText("");
+            	senha.setText("");
+            	}
+            });
 
 	}
 }
