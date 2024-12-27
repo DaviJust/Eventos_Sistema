@@ -1,0 +1,71 @@
+package projeto;
+import java.util.ArrayList;
+
+public class Participante {
+    /*
+     * variaveis
+     */
+    public String nome;
+    public String senha;
+    public String curso;
+    public String matricula;
+    public String evento;
+    ArrayList<Participante> listaP = new ArrayList<>();
+    /*
+     * Metodos getters e setters
+     */
+    public String getNome() {
+        return nome;
+    }
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+    public String getSenha() {
+        return senha;
+    }
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+    public String getCurso() {
+        return curso;
+    }
+    public void setCurso(String curso) {
+        this.curso = curso;
+    }
+    public String getMatricula() {
+        return matricula;
+    }
+    public void setMatricula(String matricula) {
+        this.matricula = matricula;
+    }
+    public ArrayList<Participante> getListaP() {
+        return listaP;
+    }
+    public void setListaP(ArrayList<Participante> listaP) {
+        this.listaP = listaP;
+    }
+    public String getEvento() {
+        return evento;
+    }
+
+    public void setEvento(String evento) {
+        this.evento = evento;
+    }
+    /*
+     * Construtores
+     */
+    public Participante(String nome, String senha, String curso, String matricula, ArrayList<Participante> listaP) {
+        this.nome = nome;
+        this.senha = senha;
+        this.curso = curso;
+        this.matricula = matricula;
+        this.listaP = listaP;
+    }
+
+    public Participante(){
+
+    }
+
+    
+    
+}
